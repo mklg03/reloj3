@@ -1,0 +1,13 @@
+.digital-clock {
+  font-family: 'Courier New', Courier, monospace; /* Fuente retro */
+  font-size: 3rem;
+  color: #33ff33; /* Verde típico de las pantallas retro */
+  background-color: black; /* Fondo negro para contraste */
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid #0c0d1b; 
+  width: fit-content;
+  margin: 0; /* Ajustado para centrar dentro del body */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Efecto de brillo */
+  text-align: center;
+}
