@@ -19,3 +19,21 @@
     align-items: center;
     height: 100vh;
 }
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container button {
+  margin-bottom: 20px; /* Espacio entre el botón y el reloj */
+}
+
+.clock-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

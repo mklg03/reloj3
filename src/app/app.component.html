@@ -1,4 +1,9 @@
-<div class="app-container">
- 
-  <app-reloj></app-reloj>
-</div>
+<div class="button-container">
+    <button (click)="toggleClock()">Cambiar Reloj</button>
+  </div>
+  <div class="clock-display">
+    <app-reloj *ngIf="showDigitalClock"></app-reloj>
+    <app-reloj-analogico *ngIf="showAnalogClock"></app-reloj-analogico>
+    <app-reloj-de-cubos *ngIf="showCubeClock"></app-reloj-de-cubos>
+  </div>
+  

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterComponent } from './register.component';
+import { RelojAnalogicoComponent } from './reloj-analogico.component';
 
-describe('RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
+describe('RelojAnalogicoComponent', () => {
+  let component: RelojAnalogicoComponent;
+  let fixture: ComponentFixture<RelojAnalogicoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegisterComponent]
+      imports: [RelojAnalogicoComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RegisterComponent);
+    fixture = TestBed.createComponent(RelojAnalogicoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,32 @@
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hand {
+  width: 50%;
+  height: 4px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  transform: rotate(90deg);
+}
+
+.hour-hand {
+  width: 25%;
+  height: 6px;
+}
+
+.minute-hand {
+  width: 40%;
+}
+
+.second-hand {
+  width: 45%;
+  background: red;
+}
