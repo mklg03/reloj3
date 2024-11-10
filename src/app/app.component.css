@@ -1,23 +1,23 @@
 .app-container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  body {
-    background-color: #f0f0f0; /* Fondo gris claro */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #f0f0f0; /* Fondo gris claro */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .clock-container {
@@ -27,13 +27,24 @@
   justify-content: center;
 }
 
-.clock-container button {
-  margin-bottom: 20px; /* Espacio entre el botón y el reloj */
-}
-
 .clock-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px; /* Espacio entre los controles y los relojes */
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }

@@ -1,0 +1,9 @@
+<div class="slider-container">
+    <input type="range" min="0" max="23" [(ngModel)]="horaSeleccionada" (input)="ajustarHora($event)">
+    <span>{{ horaSeleccionada }}:00</span>
+  </div>
+  <div class="road">
+    <div class="hour-mark" *ngFor="let hour of [].constructor(24); let i = index" [style.left.%]="(i / 24) * 100"></div>
+    <div class="car" [style.left.%]="carPosition"></div>
+  </div>
+  

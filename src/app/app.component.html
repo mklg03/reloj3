@@ -1,9 +1,12 @@
-<div class="button-container">
-    <button (click)="toggleClock()">Cambiar Reloj</button>
-  </div>
-  <div class="clock-display">
-    <app-reloj *ngIf="showDigitalClock"></app-reloj>
-    <app-reloj-analogico *ngIf="showAnalogClock"></app-reloj-analogico>
-    <app-reloj-de-cubos *ngIf="showCubeClock"></app-reloj-de-cubos>
+<div class="app-container">
+    <div class="controls-container"> <!-- Contenedor de controles -->
+      <button (click)="toggleClock()">Cambiar Reloj</button>
+    </div>
+    <div class="clock-display">
+      <app-reloj *ngIf="showDigitalClock"></app-reloj>
+      <app-reloj-analogico *ngIf="showAnalogClock"></app-reloj-analogico>
+      <app-reloj-de-cubos *ngIf="showCubeClock"></app-reloj-de-cubos>
+      <app-carro *ngIf="showCarClock"></app-carro> 
+   
   </div>
   
