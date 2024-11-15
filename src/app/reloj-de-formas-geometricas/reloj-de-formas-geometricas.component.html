@@ -1,0 +1,16 @@
+<div class="slider-container">
+    
+    <input 
+      id="hourSlider" 
+      type="range" 
+      min="0" 
+      max="23" 
+      [(ngModel)]="manualHour" 
+      (input)="onHourChange(manualHour)">
+    <span>{{ manualHour }}:00</span> <!-- Muestra la hora seleccionada -->
+  </div>
+  
+  <div class="clock-container">
+    <div *ngFor="let shape of shapes" class="shape" [ngClass]="shape" [style.transform]="getTransform(shape)"></div>
+  </div>
+  

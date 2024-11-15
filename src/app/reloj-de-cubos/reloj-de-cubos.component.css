@@ -1,47 +1,67 @@
+/* Estilos para el slider */
 .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Ajusta el margen superior para separar el slider de los cubos */
+  margin-bottom: 10px; /* Ajusta el margen inferior para separar el slider de los otros elementos */
+}
+
+input[type="range"] {
+  margin-right: 10px;
+}
+
+/* Estilos generales para la cuadrícula de cubos y el reloj */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #282c34; /* Fondo oscuro */
+}
+
+.clock-container {
+  position: relative;
+  width: 100%; /* Permite que los cubos se extiendan más allá del contenedor */
+  height: 500px; /* Ajusta la altura según sea necesario */
+  overflow: visible; /* Permite que los cubos caigan fuera del contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  animation: fall infinite 10s linear;
+}
+
+.cube {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border: 1px solid #000;
+}
+
+/* Animación de caída para los cubos */
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
   }
-  
-  .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Ajusta el margen superior para separar el slider de los cubos */
+  100% {
+    transform: translateY(100%);
   }
-  
-  input[type="range"] {
-    margin-right: 10px;
-  }
-  
-  .clock-container {
-    position: relative;
-    width: 100%; /* Permitir que los cubos se extiendan más allá del contenedor */
-    height: 500px; /* Ajustar la altura según sea necesario */
-    overflow: visible; /* Permitir que los cubos caigan fuera del contenedor */
-  }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    animation: fall infinite 10s linear;
-  }
-  
-  .cube {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border: 1px solid #000;
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(100%);
-    }
-  }
-  
+}
+
+/* Estilos para el slider */
+#hour-slider {
+  width: 200px;
+}
+
+span {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(7, 6, 6);
+}

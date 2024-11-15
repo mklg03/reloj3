@@ -1,0 +1,22 @@
+<div class="agua-container">
+    <!-- Contenedor del tanque de agua -->
+    <div class="tank-container">
+      <div class="tank" [style.height.%]="waterLevel"></div>
+    </div>
+  
+    <!-- Contenedor para la hora y el slider -->
+    <div class="slider-container">
+      <label for="hour-slider">Ajustar hora:</label>
+      <input
+        type="range"
+        id="hour-slider"
+        min="0"
+        max="23"
+        [value]="manualHour"
+        (input)="onHourChange($event)"
+        class="hour-slider"
+      />
+      <span>{{ manualHour }}:00</span> <!-- Muestra la hora seleccionada -->
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+<div class="flower-container">
+    <div class="flower">
+      <div *ngFor="let petal of [0, 1, 2, 3, 4, 5, 6, 7]" 
+           class="petal"
+           [ngClass]="{
+             'fully-open': isPetalFullyOpen,
+             'semi-open': isPetalSemiOpen,
+             'closed': isPetalClosed
+           }"
+           [style.transform]="'rotate(' + (petal * 45) + 'deg)'">
+      </div>
+    </div>
+    
+   
+    <div class="time-control">
+      
+      <input 
+        id="hour-slider" 
+        type="range" 
+        min="0" 
+        max="23" 
+        step="1" 
+        [(ngModel)]="horaSeleccionada" 
+        (input)="ajustarHora($event)">
+      <span>{{ horaSeleccionada }}:00</span> 
+    </div>
+  </div>
+  
+  

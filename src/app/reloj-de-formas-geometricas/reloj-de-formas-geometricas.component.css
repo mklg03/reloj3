@@ -1,0 +1,52 @@
+.clock-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .shape {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transition: transform 1s linear;
+  }
+  
+  .shape.circle {
+    border-radius: 50%;
+    background-color: #3498db;
+  }
+  
+  .shape.square {
+    background-color: #e74c3c;
+  }
+  
+  .shape.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #2ecc71;
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Add space between the slider and the shapes */
+  }
+  
+  #hourSlider {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

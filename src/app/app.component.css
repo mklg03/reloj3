@@ -10,7 +10,7 @@ h1 {
 }
 
 body {
-  background-color: #f0f0f0; /* Fondo gris claro */
+  background-color: #f0f0f0; 
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  margin-top: 20px; /* Espacio entre los controles y los relojes */
+  margin-top: 20px; 
 }
 
 .slider-container {
