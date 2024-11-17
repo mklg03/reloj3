@@ -1,0 +1,15 @@
+<div class="hora-dia-container" [ngStyle]="{ 'background': getBackgroundAndIcon().background }">
+    <div class="hora-dia-content">
+      <!-- Mostrar el ícono correspondiente a la hora del día -->
+      <div class="icono">
+        <span>{{ getBackgroundAndIcon().icon }}</span>
+      </div>
+  
+      <!-- Slider para cambiar la hora -->
+      <div class="slider-container">
+        <input type="range" min="0" max="23" [(ngModel)]="horaActual" />
+        <span class="hora">{{ horaActual }}:00</span> <!-- Mostrar la hora justo al lado del slider -->
+      </div>
+    </div>
+  </div>
+  

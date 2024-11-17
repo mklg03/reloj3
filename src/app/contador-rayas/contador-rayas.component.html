@@ -1,0 +1,15 @@
+<div class="slider-container">
+  <label>Horas: {{ horaActual }}</label>
+  <input type="range" min="0" max="23" [(ngModel)]="horaActual" />
+</div>
+<div class="slider-container">
+  <label>Minutos: {{ minutoActual }}</label>
+  <input type="range" min="0" max="59" [(ngModel)]="minutoActual" />
+</div>
+
+<div class="rayas-container">
+  <div class="hora-raya" *ngFor="let i of generarArray(horaActual)"></div>
+</div>
+<div class="rayas-container">
+  <div class="minuto-raya" *ngFor="let i of generarArray(minutoActual)"></div>
+</div>

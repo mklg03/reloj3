@@ -1,0 +1,45 @@
+/* Asegúrate de que ocupe toda la pantalla */
+.hora-dia-container {
+    height: 100vh; /* 100% de la altura de la pantalla */
+    width: 100vw;  /* 100% del ancho de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background 1s ease; /* Transición suave entre los colores */
+  }
+  
+  /* Contenedor que mantiene el contenido centrado */
+  .hora-dia-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black; /* Color de la hora */
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+  }
+  
+  /* Estilo para el icono (más grande) */
+  .icono {
+    font-size: 10rem; /* Hacer que el icono sea mucho más grande */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el slider y la hora */
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  input[type="range"] {
+    width: 50%; /* Hacer que el slider ocupe la mitad del ancho */
+  }
+  
+  span.hora {
+    font-size: 30px; /* Usamos el tamaño estándar para la hora */
+    color: black; /* Aseguramos que la hora sea negra */
+  }
+  

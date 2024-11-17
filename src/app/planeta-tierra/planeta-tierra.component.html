@@ -1,0 +1,20 @@
+<div class="planet-container">
+    <!-- Capa oscura que se aplica dependiendo de la hora -->
+    <div class="planet-dark" [style.opacity]="sombraOpacity"></div>
+  </div>
+  
+  <!-- Slider para ajustar la hora -->
+  <div class="time-control">
+    <label for="hour-slider">Ajustar hora:</label>
+    <input
+      id="hour-slider"
+      type="range"
+      min="0"
+      max="23"
+      step="1"
+      [(ngModel)]="horaSeleccionada"
+      (input)="ajustarHora($event)"
+    />
+    <span>{{ horaSeleccionada }}:00</span>
+  </div>
+  

@@ -1,0 +1,23 @@
+.slider-container {
+  margin-bottom: 10px;
+}
+
+.rayas-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.hora-raya {
+  width: 5px;
+  height: 30px;
+  background-color: black;
+  margin: 2px;
+}
+
+.minuto-raya {
+  width: 2px;
+  height: 15px;
+  background-color: gray;
+  margin: 1px;
+}

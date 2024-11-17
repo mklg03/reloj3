@@ -1,6 +1,12 @@
-<div class="clock-container">
-  <button (click)="toggleClock()">Cambiar reloj</button>
+<!-- src/app/app.component.html -->
+<div class="app-container">
+  <!-- Sección para los formularios de login y registro -->
+  <router-outlet></router-outlet>
 
-  <ng-container *ngComponentOutlet="currentClockComponent"></ng-container>
+  <!-- Sección para el reloj -->
+  <div class="clock-container">
+    <button (click)="toggleClock()" class="toggle-clock-btn">Cambiar reloj</button>
+    <!-- Renderizar el componente de reloj actual -->
+    <ng-container *ngComponentOutlet="currentClockComponent"></ng-container>
+  </div>
 </div>
-
