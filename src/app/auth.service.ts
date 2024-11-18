@@ -16,12 +16,12 @@ export class AuthService {
 
   login(username: string, password: string): Observable<AuthResponse> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<AuthResponse>(`${this.apiUrl}/login`, { username, password }, { headers });
+    return this.http.post<AuthResponse>(`${this.apiUrl}/users/login`, { username, password }, { headers });
   }
 
-  register(username: string, password: string): Observable<{message: string}> {
+  register(username: string, password: string, email: string): Observable<{ message: string }> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<{ message: string }>(`${this.apiUrl}/register`, { username, password });
+    return this.http.post<{ message: string }>(`${this.apiUrl}/users/register`, { username, password, email });
   }
 
   logout(): void {

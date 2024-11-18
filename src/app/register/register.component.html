@@ -1,14 +1,17 @@
-<!-- src/app/register/register.component.html -->
 <div class="register-container">
     <h2>Registro de nuevo usuario</h2>
   
     <!-- Formulario de registro -->
-    <form>
+    <form (ngSubmit)="register()">
       <div class="form-group">
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username" [(ngModel)]="username" required />
       </div>
 
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required />
+      </div>
   
       <div class="form-group">
         <label for="password">Contraseña:</label>
@@ -24,5 +27,9 @@
     <div class="login-link">
       <button (click)="goToLogin()">¿Ya tienes cuenta? Inicia sesión aquí</button>
     </div>
-  </div>
   
+    <!-- Mensaje de error o éxito -->
+    <div *ngIf="message" [ngClass]="{ 'error': isError, 'success': !isError }">
+      {{ message }}
+    </div>
+</div>

@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './app/login/login.component';
 import { RegisterComponent } from './app/register/register.component';
-import { RelojComponent } from './app/reloj/reloj.component';
+import { ClockDashboardComponent } from './app/clock-dashboard/clock-dashboard.component'; // Importa el nuevo componente
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Ruta por defecto
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'reloj', component: RelojComponent }, // Agrega la ruta para el reloj
-  
+  { path: 'dashboard', component: ClockDashboardComponent }, // Agrega la ruta para el dashboard de relojes
+
   // Otras rutas pueden añadirse aquí
 ];
 

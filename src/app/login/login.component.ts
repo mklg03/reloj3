@@ -26,7 +26,7 @@ export class LoginComponent {
       // Si la autenticación es exitosa, redirigir al usuario
       console.log('Login exitoso', response);
       localStorage.setItem('token', response.token);  // Guardar el token si es necesario
-      this.router.navigate(['/user-dashboard']);  // Redirige a la página principal de usuario
+      this.router.navigate(['/dashboard']);  // Redirige a la página principal de usuario
     }, error => {
       console.error('Error en el login:', error);
     });

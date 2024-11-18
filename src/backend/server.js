@@ -26,20 +26,9 @@ app.use(bodyParser.json());
 
 const SECRET_KEY = 'your_secret_key'; // Clave secreta para JWT
 
-// Middleware para autenticar el token
-function authenticateToken(req, res, next) {
-  const token = req.headers['authorization'];
-  if (!token) return res.status(401).send('Access Denied');
-
-  jwt.verify(token.split(' ')[1], SECRET_KEY, (err, user) => {
-    if (err) return res.status(403).send('Invalid Token');
-    req.user = user;
-    next();
-  });
-}
-
 // Ruta para registrar un nuevo usuario
 app.post('/users/register', async (req, res) => {
+  console.log('Registro recibido:', req.body); // Verifica los datos que llegan
   try {
     const { username, password, email } = req.body;
 
@@ -55,7 +44,7 @@ app.post('/users/register', async (req, res) => {
       'INSERT INTO users (username, password, email) VALUES ($1, $2, $3)',
       [username, hashedPassword, email]
     );
-    res.status(201).send('User registered successfully');
+    res.status(201).send({ message: 'Usuario registrado exitosamente' });
   } catch (error) {
     console.error('Error registering user:', error);
     res.status(500).send('Error registering user');
@@ -64,23 +53,27 @@ app.post('/users/register', async (req, res) => {
 
 // Ruta para iniciar sesión de usuario
 app.post('/users/login', async (req, res) => {
-  try {
-    const { username, password } = req.body;
+  const { username, password } = req.body;
 
+  try {
     // Buscar el usuario en la base de datos
     const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
     const user = result.rows[0];
 
     // Verificar las credenciales
     if (user && await bcrypt.compare(password, user.password)) {
-      const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
+      const token = jwt.sign(
+        { id: user.id, username: user.username }, 
+        SECRET_KEY, 
+        { expiresIn: '1h' }
+      );
       res.json({ token });
     } else {
-      res.status(401).send('Invalid credentials');
+      res.status(401).send('Credenciales inválidas');
     }
   } catch (error) {
-    console.error('Error logging in:', error);
-    res.status(500).send('Error logging in');
+    console.error('Error al iniciar sesión:', error);
+    res.status(500).send('Error al iniciar sesión');
   }
 });
 
